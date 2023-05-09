@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="style2.css" rel="stylesheet" type="text/css" />
+    <title>Color Picker</title>
+    <style>
+        .red{
+            background-color: red;
+        }
+        .green{
+            background-color: green;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .black{
+            background-color: black;
+        }
+        .lightGray{
+            background-color: lightgray;
+        }
+        .cornSilk{
+            background-color: cornsilk;
+        }
+
+        .pink{
+            color: pink;
+        }
+        .teal{
+            color: teal;
+        }
+        .purple{
+            color: purple;
+        }
+        .paleGreen{
+            color: palegreen;
+        }
+        .lavenderBlush{
+            color: lavenderblush;
+        }
+        .maroon{
+            color: maroon;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Arcu cursus vitae congue mauris rhoncus aenean vel elit scelerisque. Molestie ac feugiat sed
+            lectus vestibulum mattis ullamcorper velit sed. Consequat nisl vel pretium lectus quam. Adipiscing tristique
+            risus nec feugiat. Accumsan tortor posuere ac ut consequat semper viverra nam libero. Nunc lobortis mattis
+            aliquam faucibus purus. Tortor at risus viverra adipiscing at in tellus integer feugiat. Viverra maecenas
+            accumsan lacus vel facilisis. Senectus et netus et malesuada fames ac turpis. Tincidunt vitae semper quis
+            lectus nulla at volutpat diam. Non curabitur gravida arcu ac tortor dignissim convallis aenean. Pretium
+            viverra suspendisse potenti nullam ac tortor vitae purus faucibus. Congue quisque egestas diam in arcu
+            cursus euismod quis. Diam maecenas sed enim ut sem viverra. Enim facilisis gravida neque convallis a cras
+            semper auctor. Ut aliquam purus sit amet luctus.
+            Volutpat odio facilisis mauris sit amet massa vitae tortor condimentum. Malesuada pellentesque elit eget
+            gravida cum sociis natoque penatibus et. Arcu non odio euismod lacinia at quis risus. Habitasse platea
+            dictumst vestibulum rhoncus est pellentesque. Erat nam at lectus urna duis convallis convallis tellus.
+            Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Elementum integer enim neque volutpat
+            ac tincidunt. Velit euismod in pellentesque massa. Tellus orci ac auctor augue. Fusce id velit ut tortor
+            pretium viverra. Diam donec adipiscing tristique risus. Quam viverra orci sagittis eu volutpat odio. Vel
+            pretium lectus quam id leo in vitae turpis.</p>
+        <div class="row">
+            <h3>Background</h3>
+            <button id="1">RED</button>
+            <button id="2">GREEN</button>
+            <button id="3">BLUE</button>
+            <button id="4">BLACK</button>
+            <button id="5">LIGHT GRAY</button>
+            <button id="6">CORN SILK</button>
+        </div>
+        <div class="row">
+            <h3>Text</h3>
+            <button id="7">PINK</button>
+            <button id="8">TEAL</button>
+            <button id="9">PURPLE</button>
+            <button id="10">PALE GREEN</button>
+            <button id="11">LAVENDER BLUSH</button>
+            <button id="12">MAROON</button>
+        </div>
+        <button id="clear">CLEAR</button>
+    </div>
+</div>
+<script>
+    const content = document.querySelector('.content');
+    const red = document.getElementById('1');
+    const green = document.getElementById('2');
+    const blue = document.getElementById('3');
+    const black = document.getElementById('4');
+    const lightGray = document.getElementById('5');
+    const cornSilk = document.getElementById('6');
+
+    const pink = document.getElementById('7');
+    const teal = document.getElementById('8');
+    const purple = document.getElementById('9');
+    const paleGreen = document.getElementById('10');
+    const lavenderBlush = document.getElementById('11');
+    const maroon = document.getElementById('12');
+
+    const clearButton = document.getElementById('clear');
+
+
+    red.addEventListener('click', function(e){
+        removeBGColor();
+       content.classList.add('red');
+    });
+    green.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('green');
+    });
+    blue.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('blue');
+    });
+    black.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('black');
+    });
+    lightGray.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('lightGray');
+    });
+    cornSilk.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('cornSilk');
+    });
+
+
+    pink.addEventListener('click', function(e){
+        removeTextColor();
+        content.classList.add('pink');
+    });
+    teal.addEventListener('click', function(e){
+        removeTextColor();
+        content.classList.add('teal');
+    });
+    purple.addEventListener('click', function(e){
+        removeTextColor();
+        content.classList.add('purple');
+    });
+    paleGreen.addEventListener('click', function(e){
+        removeTextColor();
+        content.classList.add('paleGreen');
+    });
+    lavenderBlush.addEventListener('click', function(e){
+        removeTextColor();
+        content.classList.add('lavenderBlush');
+    });
+    maroon.addEventListener('click', function(e){
+        removeTextColor();
+        content.classList.add('maroon');
+    });
+
+
+    clearButton.addEventListener('click', function(e){
+        removeTextColor();
+        removeBGColor();
+    });
+
+
+    function removeBGColor(){
+        content.classList.remove('red');
+        content.classList.remove('green');
+        content.classList.remove('blue');
+        content.classList.remove('black');
+        content.classList.remove('lightGray');
+        content.classList.remove('cornSilk');
+    }
+    function removeTextColor(){
+        content.classList.remove('pink');
+        content.classList.remove('teal');
+        content.classList.remove('purple');
+        content.classList.remove('paleGreen');
+        content.classList.remove('lavenderBlush');
+        content.classList.remove('maroon');
+    }
+</script>
+</body>
+</html>
