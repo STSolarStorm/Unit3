@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="style2.css" rel="stylesheet" type="text/css" />
+    <title>Avatar Chooser</title>
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <div class="row">
+            <img class="picture" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAI4AjgMBIgACEQEDEQH/xAAaAAEAAwEBAQAAAAAAAAAAAAAAAQIDBQQH/8QALhAAAgECBAQFAgcAAAAAAAAAAAECAxEEITFBFFFSkRIyYXGSgaEFExUiorHR/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAWEQEBAQAAAAAAAAAAAAAAAAAAEQH/2gAMAwEAAhEDEQA/APuIAAAAAAAAAAAi65k3AAAAAAAAAAAAAAAAAFZSS9ysp7IoBZzexUAqAAAlNrcspvcoANlJPQkwRpGd8mRVwAAAAAAADOcr5ImcrIzAAAqBWU4wj4ptJcyZNRi5PRanJr1ZVpuTyWy5BXtljqa8sZP7EwxtKTtJSj7nNBB2k00mmmmSczCV3Smoyzg3n6HTKAACNISvkXMFk7m0XdXIqQAAAIlowMpu8iAwVAAAYY52w0rb2v3OWdfEQ/MoyitXoclq177EXEAAKHYotujTb1cV/RyIRc5qMdWdlJRiorRKyCJABUC9N52KExdpIK2ABAKz8rLFZ+VgZAAqAAAHkxOEVRudN2luuZ6KlWnTX75pfUwljqSdoxlL6BXilRqx81OXYmGHqzeUGlzeR6X+IWeVP+Q/UOdL7kG2Gw6o5vOfM3PLHHUn5lKP0ub06sKnkmn6FFwAEAtQFqgrcAEAh6MkAYbgtNWfoypUDwYnGNtxo5Lq5m+Nm4UHZ2cnY5hFwu3m9QAFAAAGjutQAPbhsW/EoVs1tL/T3HEOrg5ueHi27tZBNbEwV5EGlNblFwAQAABWa8UTI3KTjugPHjKU60IqCTad3meTg6/Svkjpgo5nB1+lfJDg6/Su6OmAVzODr9K+SI4Sv0rujqAFczg6/Su44Ov0rudMArl8HX6V3Pbg6cqVLwzWbdzcLN5AEruxuslYrGNkWIAAAAAAAAKShfTUo00bENJ6oDEGjp8irhL3KKgnwvkPDLkBALKD9Cygl6gUUbmkYpe5YEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/9k="
+            alt="Picture of a blank avatar">
+        </div>
+        <h3>Avatar Choices</h3>
+        <div class="row">
+            <button id="1">AVATAR 1</button>
+            <button id="2">AVATAR 2</button>
+            <button id="3">AVATAR 3</button>
+            <button id="4">AVATAR 4</button>
+            <button id="5">AVATAR 5</button>
+            <button id="6">AVATAR 6</button>
+        </div>
+        <button id="clear">CLEAR</button>
+    </div>
+</div>
+<script>
+    const picture = document.querySelector('.picture');
+    const avatar1 = document.getElementById('1');
+    const avatar2 = document.getElementById('2');
+    const avatar3 = document.getElementById('3');
+    const avatar4 = document.getElementById('4');
+    const avatar5 = document.getElementById('5');
+    const avatar6 = document.getElementById('6');
+    const clearButton = document.getElementById('clear');
+
+    avatar1.addEventListener('click', function(e){
+        picture.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjxMepY96aV6lCGlFKH0ftpn8kGCuqLBnacg&usqp=CAU";
+    });
+
+
+</script>
+</body>
+</html>
