@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="style2.css" rel="stylesheet" type="text/css" />
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <h3>What is this?</h3>
+        <h4>I don't want this</h4>
+    </div>
+</div>
+<script>
+    const content = document.querySelector('.content');
+    //Replace contents of an html tag using innerHTML
+    content.innerHTML = '<h1 id="lose">I love Anime</h1><h4>I like eating Chicken</h4>';
+    // <h1 class="gone">I love Anime</h1>
+    // const unwantedElement2 = document.querySelector('.gone');
+    // unwantedElement2.remove();
+    // A . is used to remove by class
+
+
+    //add a new element in addition to existing elements
+    const zelda = document.createElement('h1');
+    zelda.innerHTML = 'I love Zelda';
+    content.appendChild(zelda);
+    const food = document.createElement('h1');
+    food.innerHTML = "I don't like seafood";
+    content.appendChild(food);
+    const jojo = document.createElement('h1');
+    jojo.innerHTML = 'My favorite Jojo part is Diamond is not Crash';
+    content.appendChild(jojo);
+    const color = document.createElement('h1');
+    color.innerHTML = 'I love the color black';
+    content.appendChild(color);
+
+    //put this at the top in addition to existing elements
+    const food2 = document.createElement('h1');
+    food2.innerHTML = 'I do not like Pizza';
+    content.insertAdjacentElement('afterbegin', food2);
+    const food3 = document.createElement('h1');
+    food3.innerHTML = "I don't like Pizza";
+    content.insertAdjacentElement('beforeend', food3);
+    const food4 = document.createElement('h1');
+    food4.innerHTML = "I most definitely don't like Pizza";
+    content.insertAdjacentElement('afterend', food4);
+
+    //to remove an element
+    const unwantedElement = document.querySelector('h4');
+    unwantedElement.remove();
+    const unwantedElement2 = document.querySelector('#lose');
+    unwantedElement2.remove();
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="style2.css" rel="stylesheet" type="text/css" />
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <div>
+            <label for="item">Item:</label>
+            <input type="text" id="item" name="item">
+        </div>
+
+        <button id="addItem">Add Item</button>
+        <div class="text">
+            <ul></ul>
+        </div>
+    </div>
+</div>
+<script>
+    const content = document.querySelector('.text');
+    const item = document.getElementById('item');
+    const add = document.getElementById('addItem');
+    const remove = document.getElementsByClassName('text');
+
+
+    add.addEventListener('click', function(e){
+        let items = item.value;
+        const addItem = document.createElement('li');
+        addItem.innerHTML = `${items}`;
+        content.insertAdjacentElement('beforeend', addItem);
+    });
+
+
+
+
+    remove.addEventListener('click', function(e){
+        // let items = item.value;
+        const unwantedElement = document.querySelector('li');
+        unwantedElement.innerHTML = '';
+        unwantedElement.remove();
+    });
+
+
+</script>
+</body>
+</html>
