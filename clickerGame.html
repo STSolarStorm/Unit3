@@ -7,6 +7,9 @@
         .hidden{
             display: none;
         }
+        .hidden2{
+            display: none;
+        }
     </style>
     <title>Clicker Game</title>
 </head>
@@ -31,8 +34,10 @@
                 <legend><h2>Shop:</h2></legend>
                 <div class="shop">
                     <div class="hidden" id="item1">
-                        <input type="radio" id="2InsteadOf1" name="powerUp">
-                        <label for="2InsteadOf1">1 Click for 2: 25 </label>
+                        <button>1 Click for 2 || 25 Clicks</button>
+                    </div>
+                    <div class="hidden2" id="item2">
+                        <button>Times 2 || 50 Clicks</button>
                     </div>
                 </div>
             </fieldset>
@@ -45,6 +50,7 @@
     const era = document.querySelector('.era');
     const picture = document.querySelector('.picture');
     const score = document.querySelector('.score');
+    const shopItems = document.querySelector('.input');
     const clickButton = document.getElementById('click');
     let item1 = document.getElementById('item1');
 
@@ -77,10 +83,10 @@
 
 
 
-    
+
 
     if (numberScore >= 25){
-        item1.classList.remove("hidden");
+        shopItems.classList.remove("hidden");
     }
 
 
