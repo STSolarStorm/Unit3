@@ -23,7 +23,7 @@ input[type="text"], textarea, select{
     color: #374151;
 }
 fieldset{
-    border: 6px solid #000000;
+    border: 2px solid #000000;
     border-radius: 6px;
     width: fit-content;
     margin-bottom: 16px;
