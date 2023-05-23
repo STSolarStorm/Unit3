@@ -99,44 +99,36 @@
     });
 
     numberScore = 0;
-    let numberScoreClick = 1;
     let storePurchase1 = false;
     let storePurchase2 = false;
     let storePurchase3 = false;
 
+    let upgrade1 = numberScore + 2;
+    let upgrade2 = numberScore + 2;
+    let upgrade3 = numberScore + 5;
+
     clickButton.addEventListener('click', function(e){
 
         if (storePurchase1 == true && storePurchase2 == false){
-            numberScore = numberScore + 1 + numberScoreClick;
+            numberScore = numberScore + upgrade1;
             score.innerHTML = `<h2 id="numberScore">${numberScore}</h2>`;
         } else if (storePurchase2 == true && storePurchase1 == false){
-            let purchase1 = 1 + numberScoreClick;
-            numberScore = numberScore + purchase1 * 2;
+            numberScore = numberScore + upgrade2;
             score.innerHTML = `<h2 id="numberScore">${numberScore}</h2>`;
         } else if (storePurchase1 == true && storePurchase2 == true){
-            let twoPowerUps = numberScore + 1 + numberScoreClick;
-            let purchase1 = 1 + numberScoreClick;
-            let purchase2 = purchase1 * 2;
-            numberScore = twoPowerUps + purchase2;
+            numberScore = numberScore + upgrade1 + upgrade2;
             score.innerHTML = `<h2 id="numberScore">${numberScore}</h2>`;
         } else if (storePurchase3 == true && storePurchase1 == false && storePurchase2 == false){
-            numberScore = numberScore + numberScoreClick*5;
+            numberScore = numberScore + upgrade3;
             score.innerHTML = `<h2 id="numberScore">${numberScore}</h2>`;
         }else if (storePurchase3 == true && storePurchase1 == true && storePurchase2 == false){
-            let twoPowerUps = numberScore + 1 + numberScoreClick;
-            numberScore = twoPowerUps + numberScoreClick*5;
+            numberScore = numberScore + upgrade3;
             score.innerHTML = `<h2 id="numberScore">${numberScore}</h2>`;
         } else if (storePurchase3 == true && storePurchase1 == false && storePurchase2 == true){
-            let purchase1 = 1 + numberScoreClick;
-            let purchase2 = numberScore + purchase1 * 2;
-            numberScore = purchase2 + numberScoreClick*5;
+            numberScore = numberScore + upgrade2 + upgrade3;
             score.innerHTML = `<h2 id="numberScore">${numberScore}</h2>`;
         } else if (storePurchase3 == true && storePurchase1 == true && storePurchase2 == true){
-            let threePowerUps = numberScore + 1 + numberScoreClick;
-            let purchase1 = 1 + numberScoreClick;
-            let purchase2 = purchase1 * 2;
-            let purchase3 = numberScoreClick * 5;
-            numberScore = threePowerUps + purchase2 + purchase3;
+            numberScore = numberScore + upgrade1 + upgrade2 + upgrade3;
             score.innerHTML = `<h2 id="numberScore">${numberScore}</h2>`;
         }
         else{
