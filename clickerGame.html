@@ -57,9 +57,7 @@
                     </div>
                 </div>
             </fieldset>
-
             <button id="restart">RESTART</button>
-
     </div>
 </div>
 <script>
@@ -164,7 +162,6 @@
             restart.innerHTML = 'RESTART';
             restart.href = '';
             content.insertAdjacentElement('beforeend', restart);
-
         }
 
 
@@ -190,7 +187,7 @@
        numberScore -= 25;
        score.innerHTML = `<h2 id="numberScore">${numberScore}</h2>`;
        storePurchase1 = true;
-        hiddenStuff.className = "hidden";
+       hiddenStuff.className = "hidden";
 
         if (numberScore >= 0) {
             era.innerHTML = '<h1 id="StarWars">The Galactic Republic</h1>' + '<h4 id="StarWars2">1032BBY - 19BBY</h4>';
